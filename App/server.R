@@ -23,7 +23,12 @@ shinyServer(function(input, output) {
   output$stars_caption <- renderText({
     paste("Stars Between ", input$stars[1], " and ", input$stars[2], " stars")
   }) 
-
+  
+  output$mean_beds_caption <- renderText({
+    filtered <- reactive_filtered()
+    mean(filtered$Beds)
+  }) 
+  
 
   output$mytable <-  renderDataTable({
     filtered <- reactive_filtered()

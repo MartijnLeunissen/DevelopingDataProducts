@@ -21,6 +21,9 @@ shinyUI(
                           p("List of hotels in Amsterdam with the amount of stars, rooms, beds and their location"),
                           h4("Filter Active:"),
                           p(textOutput("stars_caption")),
+                          h4("Mean number of Beds for Selection:"),
+                          p(textOutput("mean_beds_caption")),
+                          p(""),
                           htmlOutput("outputmap"),
                           p(""),
                           dataTableOutput('mytable')
